@@ -1,4 +1,4 @@
-{% assign crumb_array = page.url | split:'/' | shift %}
+{% assign crumb_array = page.url | prepend: site.baseurl | split:'/' | shift %}
 {% assign crumbs = '' | split: '' %}
 {% assign working_crumb = '' | split: '' %}
 
