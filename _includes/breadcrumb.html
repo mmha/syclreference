@@ -1,4 +1,4 @@
-{% assign crumb_array = page.url | prepend: site.baseurl | split:'/' | shift %}
+{% assign crumb_array = page.url | split:'/' | shift %}
 {% assign crumbs = '' | split: '' %}
 {% assign working_crumb = '' | split: '' %}
 
@@ -18,7 +18,7 @@
     {% for crumb in crumbs %}
       {% for curpage in site.pages %}
         {% unless curpage.url == crumb %} {% continue %} {% endunless %}
-        {% assign crumbpage = curpage %}
+        {% assign crumbpage = curpage | prepend: site.baseurl %}
         {% break %}
       {% endfor %}
       <li> |
