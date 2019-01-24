@@ -1,26 +1,43 @@
 ---
-layout: default
+layout: concept
 ---
 
 <div class="home">
-  <table class='icon-table'>
-  <tr>
-    <td>
-        <a href='https://www.khronos.org/registry/OpenCL/specs/2.2/html/OpenCL_API.html'>
-        <div class='icon-box'>
-            <center><div class='top'><img src="{{ "/images/site/opencl.svg" | prepend: site.baseurl }}" height=200px></img></div></center>
-            <div class='bottom'>OpenCL Reference</div>
-        </div>
-        </a>
-    </td>
-    <td>
+    <center>
         <a href='libraries/'>
         <div class='icon-box'>
-            <center><div class='top'><img src="{{ "/images/site/sycl.svg" | prepend: site.baseurl }}" height=200px></img></div></center>
-            <div class='bottom'>SYCL Reference</div>
+            <div class='top'><img src="{{ "/images/site/sycl.svg" | prepend: site.baseurl }}" height=200px></img></div>
+            <div class='bottom'>API Pages</div>
         </div>
         </a>
-    </td>
-  </tr>
-  </table>
+    </center>
+
+    <ul style="margin-top: 25px; margin-bottom: 75px;">
+        {% for concept in site.concepts %}
+        <li>
+            <a href="{{concept.url}}">{{concept.title}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <table class='icon-table'>
+      <tr>
+        <td>
+            <a href='https://www.khronos.org/registry/OpenCL/specs/2.2/html/OpenCL_API.html'>
+            <div class='icon-box'>
+                <center><div class='top'><img src="{{ "/images/site/opencl.svg" | prepend: site.baseurl }}" height=200px></img></div></center>
+                <div class='bottom'>OpenCL Reference</div>
+            </div>
+            </a>
+        </td>
+        <td>
+            <a href='https://www.khronos.org/registry/spir-v/specs/unified1/SPIRV.html'>
+            <div class='icon-box'>
+                <center><div class='top'><img src="{{ "/images/site/spir.svg" | prepend: site.baseurl }}" height=200px></img></div></center>
+                <div class='bottom'>SPIR-V Reference</div>
+            </div>
+            </a>
+        </td>
+      </tr>
+        </table>
 </div>

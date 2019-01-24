@@ -11,6 +11,7 @@ subtitle: SYCL Reference Pages
 email: morris.hafner@codeplay.com
 baseurl: "/syclreference" # the subpath of your site, e.g. /blog
 url: "https://mmha.github.io/" # the base hostname & protocol for your site
+incremental: true
 
 exclude:
     - "*.sh"
@@ -22,3 +23,7 @@ markdown: kramdown
 
 plugins:
   - jekyll-redirect-from
+
+collections:
+  concepts:
+    output: true
