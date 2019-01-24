@@ -15,7 +15,7 @@ layout: concept
     <ul style="margin-top: 25px; margin-bottom: 75px;">
         {% for concept in site.concepts %}
         <li>
-            <a href="{{concept.url}}">{{concept.title}}</a>
+            <a href="{{concept.url | prepend: site.baseurl}}">{{concept.title}}</a>
         </li>
         {% endfor %}
     </ul>
